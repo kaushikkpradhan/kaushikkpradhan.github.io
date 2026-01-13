@@ -2,14 +2,21 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
+  min-height: 100vh;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
                Roboto, Helvetica, Arial, sans-serif;
   background: #ffffff;
   color: #111;
   line-height: 1.6;
 }
+
+/* ---------- LINKS ---------- */
 
 a {
   color: #111;
@@ -21,42 +28,47 @@ a:hover {
   border-bottom: 1px solid #111;
 }
 
+/* ---------- LAYOUT ---------- */
+
 .container {
-  max-width: 880px;
+  max-width: 900px;
   margin: 0 auto;
-  padding: 32px 24px 56px;
+  padding: 28px 24px 64px;
+  min-height: 75vh;
 }
 
-/* ---------- NAV ---------- */
+/* ---------- NAVIGATION ---------- */
 
 nav {
   display: flex;
   justify-content: center;
   gap: 32px;
-  margin-bottom: 40px;
   font-size: 15px;
-}
-
-nav a {
-  border: none;
   font-weight: 500;
+
+  position: sticky;
+  top: 0;
+  background: #ffffff;
+  padding: 18px 0;
+  border-bottom: 1px solid #e6e6e6;
+  z-index: 100;
 }
 
-/* ---------- HOME GRID ---------- */
+/* ---------- HOME CENTER BLOCK ---------- */
 
-.home-grid {
-  display: grid;
-  grid-template-columns: 1.6fr 0.7fr;
-  gap: 40px;
-  align-items: start;
+.center-block {
+  max-width: 740px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 24px;
 }
 
-/* ---------- TEXT ---------- */
+/* ---------- HEADINGS ---------- */
 
 h1 {
   font-size: 30px;
   font-weight: 600;
-  margin: 0 0 16px;
+  margin: 18px 0 16px;
 }
 
 h2 {
@@ -65,6 +77,8 @@ h2 {
   margin-bottom: 18px;
 }
 
+/* ---------- TEXT ---------- */
+
 p {
   font-size: 17px;
   margin-bottom: 14px;
@@ -72,9 +86,20 @@ p {
 
 /* ---------- IMAGE ---------- */
 
-.profile-img {
-  width: 100%;
+.profile-img-center {
+  width: 180px;
   border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+/* ---------- LINKS ROW ---------- */
+
+.links {
+  margin-top: 26px;
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  font-size: 15px;
 }
 
 /* ---------- LISTS ---------- */
@@ -84,52 +109,19 @@ ul {
 }
 
 li {
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   font-size: 16.5px;
-}
-
-/* ---------- LINKS ---------- */
-
-.links {
-  margin-top: 26px;
-  display: flex;
-  gap: 20px;
-  font-size: 15px;
-}
-
-/* ---------- MOBILE ---------- */
-
-@media (max-width: 800px) {
-  .home-grid {
-    grid-template-columns: 1fr;
-  }
-
-  nav {
-    gap: 18px;
-    flex-wrap: wrap;
-  }
-}
-.center-block {
-  max-width: 720px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.profile-img-center {
-  width: 180px;
-  border-radius: 4px;
-  margin-bottom: 20px;
 }
 
 .project-list li {
   margin-bottom: 18px;
-  font-size: 16.5px;
 }
 
 .teaching-list li {
   margin-bottom: 12px;
-  font-size: 16.5px;
 }
+
+/* ---------- SMALL NOTES ---------- */
 
 .small-note {
   font-size: 14.5px;
@@ -137,3 +129,16 @@ li {
   margin-top: 28px;
 }
 
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 800px) {
+  nav {
+    flex-wrap: wrap;
+    gap: 18px;
+  }
+
+  .links {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+}
