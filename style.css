@@ -109,3 +109,31 @@ li {
     flex-wrap: wrap;
   }
 }
+.center-block {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.profile-img-center {
+  width: 180px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.project-list li {
+  margin-bottom: 18px;
+  font-size: 16.5px;
+}
+
+.teaching-list li {
+  margin-bottom: 12px;
+  font-size: 16.5px;
+}
+
+.small-note {
+  font-size: 14.5px;
+  color: #444;
+  margin-top: 28px;
+}
+
